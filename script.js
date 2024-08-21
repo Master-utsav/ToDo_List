@@ -1,6 +1,5 @@
 
-
-  let todos = [];
+let todos = [];
 
 function addTodo() {  
 
@@ -56,7 +55,6 @@ function createTodoComponent(todos,index){
 
   return div;
 }
-
 
 function render(){
   document.querySelector("#task-cards").innerHTML = "";

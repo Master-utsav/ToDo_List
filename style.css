@@ -101,7 +101,6 @@ body{
   justify-content: flex-start;
   align-items: center;
   row-gap: 2px;
-  /* background-color: blue; */
  overflow-y: scroll;
 
 }
@@ -117,7 +116,6 @@ body{
   margin-top: 5px;
   padding: 5px;
   border-radius: 7px;
-  /* background-color: pink; */
 }
 
 #task-cards>div>.Tasks>input{
