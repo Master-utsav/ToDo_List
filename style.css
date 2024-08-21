@@ -17,17 +17,37 @@ body{
   align-items: center;
   padding: 3rem 0 0 9rem;
 }
+.mf-cursor{
+  color: #df03fc5d;
+  
+}
+
+.hh{
+  height: 9rem;
+  width: 20rem;
+  margin: 4rem 2rem 0 -7rem;
+  z-index: 999;
+}
 
 .text>img{
   height: 6rem;
    
 }
 .text>h1{
+  /* background-color: red; */
+  /* display: inline-block; */
+  /* content: attr(data-cursor-text); */
   font-size: 6rem;
   font-weight: 400;
   position: absolute;
   margin: 3rem 0 0 2rem; 
 }
+/* 
+.text>h1::after {
+  content: attr(data-cursor-text);
+ 
+  
+} */
 
 .text>h6{
   position: absolute;
@@ -85,12 +105,12 @@ body{
   border-radius: 8px;
   border: 1px solid black;
   cursor: pointer;
+  transition: all ease 0.3s;
 }
 
 .input-div>button:hover{
-  padding: 4px;
-  background-color: #5f467c;
-  transition: padding 0.1s  ease-in;
+  background-color: #7951a7;
+  transform: scale(1.1);
 }
 
 #task-cards{
@@ -109,16 +129,28 @@ body{
 }
 
 #task-cards>div>.Tasks{
-  background: #15101C;
+  background-color: #15101C;
   height: 5rem;
-  display:flex ;
+  display:flex;
   align-items: center;
   margin-top: 5px;
   padding: 5px;
-  border-radius: 7px;
+  border-radius:7px;
 }
 
-#task-cards>div>.Tasks>input{
+.completed{
+  text-decoration: line-through;
+  font-style: italic; 
+}
+
+
+#task-cards>div>.Tasks>input[type="checkbox"]{
+  /* background-color: rgb(254, 0, 0); */
+  transform: scale(1.5);
+  /* margin: auto; */
+}
+
+#task-cards>div>.Tasks>input[type="text"]{
   width: 29rem;
   height: 2rem;
   padding: 8px;
@@ -130,7 +162,7 @@ body{
   word-spacing: 2px;
 }
 
-#task-cards>div>.Tasks>input:not(:read-only){
+#task-cards>div>.Tasks>input[type ="text"]:not(:read-only){
   border-radius: 6px;
   background: #fff;
   color: #000000;
@@ -140,10 +172,13 @@ body{
 #task-cards>div>.Tasks>button{
   height: 1.7rem;
   width: 1.7rem;
-  color:white;
   margin-left: 7px;
   border: none;
-  background: transparent ;
-  padding: 3px;
-  
+  background: transparent;
+  padding: 4px;
+  transition: all ease 0.4s;
+}
+
+#task-cards>div>.Tasks>button:hover{
+  transform: scale(1.5);
 }
