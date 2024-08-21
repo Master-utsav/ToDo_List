@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family:gilroy
+}
+html,
+body{
+ height: 100vh;
+ background-color: #C8DEC8;
+ position:relative;
+}
+
+.text{
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0 0 9rem;
+}
+
+.text>img{
+  height: 6rem;
+   
+}
+.text>h1{
+  font-size: 6rem;
+  font-weight: 400;
+  position: absolute;
+  margin: 3rem 0 0 2rem; 
+}
+
+.text>h6{
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 9rem 0 0 2rem;
+}
+
+.main{
+  background-color:#0D0714;
+  height: calc(100vh - 12rem);   
+  width: calc(100% - 35rem);
+  margin-left: 35rem;
+  border-top-left-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+ 
+}
+
+.main>.input-div{
+  height: 6rem;
+  margin: 16px 10px 2px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input-div>input,button{
+  margin: 0 5px;
+}
+
+.input-div>input{
+  width: 35rem;
+  height: 2.5rem;
+  padding: 5px 5px 5px 10px;
+  border: 1px solid rgb(59, 61, 158);
+  border-radius: 9px;
+  outline: none;
+  background: transparent;
+  color: grey;
+  font-weight: 300;
+  font-size: 1.3rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.input-div>button{
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color:#503b69;
+  padding: 2px;
+  border-radius: 8px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.input-div>button:hover{
+  padding: 4px;
+  background-color: #5f467c;
+  transition: padding 0.1s  ease-in;
+}
+
+#task-cards{
+  height: 55.5vh;
+  width: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2px;
+  /* background-color: blue; */
+ overflow-y: scroll;
+
+}
+#task-cards::-webkit-scrollbar{
+  display: none;
+}
+
+#task-cards>div>.Tasks{
+  background: #15101C;
+  height: 5rem;
+  display:flex ;
+  align-items: center;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 7px;
+  /* background-color: pink; */
+}
+
+#task-cards>div>.Tasks>input{
+  width: 29rem;
+  height: 2rem;
+  padding: 8px;
+  border: none;  
+  outline: none;
+  background: transparent;
+  color:#8A35C3;
+  font-size: 1.4rem;
+  word-spacing: 2px;
+}
+
+#task-cards>div>.Tasks>input:not(:read-only){
+  border-radius: 6px;
+  background: #fff;
+  color: #000000;
+}
+
+
+#task-cards>div>.Tasks>button{
+  height: 1.7rem;
+  width: 1.7rem;
+  color:white;
+  margin-left: 7px;
+  border: none;
+  background: transparent ;
+  padding: 3px;
+  
+}

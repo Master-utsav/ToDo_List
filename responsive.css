@@ -1,0 +1,78 @@
+@media (max-width: 1024px) {
+  .text {
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .text>h1 {
+    font-size: 5rem;
+    margin: 2rem 0 0 0;
+    position: relative;
+  }
+  
+
+  .text>img{
+     position: absolute;
+     margin-left: -9rem;
+  }
+
+  .text>h6 {
+    font-size: 1.2rem;
+   }
+
+  .main {
+    width: calc(100% - 1rem);
+    margin-left: 1rem;
+    border-top-left-radius: 2rem;
+  }
+
+
+  #task-cards {
+    width: 80%;
+    height: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .text {
+    padding: 1rem;
+    justify-content: center;
+  }
+
+  .text>h1 {
+    font-size: 3rem;
+    position: relative;
+  }
+  .text>img{
+    position: absolute;
+    margin: 0.5rem 6rem 0 0;
+    height: 4rem;
+  }
+
+  .text>h6 {
+    font-size: 1rem;
+  }
+
+  .main {
+    width: calc(100% - 1rem);
+    border-top-left-radius: 2rem;
+  }
+
+  .input-div>input{
+    width: 25rem;
+  }
+
+  #task-cards {
+    width: 90%;
+    height: 70%;
+  }
+
+  #task-cards > div > .Tasks {
+    height: 4rem;
+  }
+
+  #task-cards > div > .Tasks > input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
