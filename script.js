@@ -49,9 +49,9 @@ function createTodoComponent(todos,index){
   const div = document.createElement("div")
    div.innerHTML=`<div class="Tasks">
         <input type="text" id="taskInputEdit${index}" value="${todos.title}" readonly>
-        <button onclick="tdone(${index})"><img src="/assets/check-line (1).svg" alt=""></button>
-        <button onclick="taskedit(${index})"><img src="/assets/pencil.svg" alt=""></button>
-        <button onclick="taskdelete(${index})"><img src="/assets/delete.svg" alt=""></button>
+        <button onclick="tdone(${index})"><img src="./assets/check-line (1).svg" alt=""></button>
+        <button onclick="taskedit(${index})"><img src="./assets/pencil.svg" alt=""></button>
+        <button onclick="taskdelete(${index})"><img src="./assets/delete.svg" alt=""></button>
      </div>`
 
   return div;
