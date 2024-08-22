@@ -115,7 +115,6 @@ body{
 
 #task-cards{
   height: 55.5vh;
-  width: 89vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
