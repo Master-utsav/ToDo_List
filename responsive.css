@@ -32,6 +32,10 @@
     width: 80%;
     height: 85%;
   }
+
+  #flower{
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

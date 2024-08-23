@@ -24,7 +24,7 @@ const cursor = new MouseFollower({
   speed: 0.55,
   ease: 'expo.out',
   overwrite: true,
-  skewing: 0,
+  skewing: 4,
   skewingText: 2,
   skewingIcon: 2,
   skewingMedia: 2,
@@ -99,32 +99,26 @@ function strik(index){
 }
 
 
-function createTodoComponent(todos,index){
-   
-  const div = document.createElement("div")
-   div.innerHTML=`<div class="Tasks">
-    <input type="checkbox" id="check-box${index}" onchange="strik(${index})" ${todos.completed ? "checked" : ""} value="${todos.title}"/>
-        <input type="text" id="taskInputEdit${index}" value="${todos.title}" readonly>
-        <button onclick="tdone(${index})"><img src="assets/check-line (1).svg" alt=""></button>
-        <button onclick="taskedit(${index})"><img src="assets/pencil.svg" alt=""></button>
-        <button onclick="taskdelete(${index})"><img src="assets/delete.svg" alt=""></button>
-     </div>`
-
-  return div;
-}
 
 function render(){
-  document.querySelector("#task-cards").innerHTML = "";
-      for (let i = 0; i < todos.length; i++) {
-        const element = createTodoComponent(todos[i], i);
-        document.querySelector("#task-cards").appendChild(element);
-      }
+  const taskCards = document.querySelector("#task-cards");  
+  taskCards.innerHTML = "";
+
+  todos.forEach((todo, index) => {  
+      const div = document.createElement("div");
+      div.className = "Tasks";
+      div.innerHTML = `<div class="Tasks">
+          <input type="checkbox" id="check-box${index}" onchange="strik(${index})" ${todo.completed ? "checked" : ""} />
+          <input type="text" id="taskInputEdit${index}" value="${todo.title}" readonly class="${todo.completed ? "completed" : ""}"> 
+          <button onclick="tdone(${index})"><img src="assets/check-line (1).svg" alt=""></button>
+          <button onclick="taskedit(${index})"><img src="assets/pencil.svg" alt=""></button>
+          <button onclick="taskdelete(${index})"><img src="assets/delete.svg" alt=""></button>
+          </div>`;
+      taskCards.appendChild(div);
+  });
 }
 
 
-
-
-//animation part
 
 
 
