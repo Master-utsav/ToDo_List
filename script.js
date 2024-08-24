@@ -78,7 +78,11 @@ function taskedit(index){
 
 function tdone(index){
   const edited=document.querySelector(`#taskInputEdit${index}`);
-    if(edited) {
+  if((edited.value).trim() === ""){
+    alert(`todo can't leave empty`)
+    return;
+  }
+  else{
     edited.value = edited.value;
     edited.setAttribute("readonly", "readonly");
    }
